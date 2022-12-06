@@ -1,0 +1,202 @@
+@import url("https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*NAV AND HERO SECTION*/
+
+p {
+  font-family: "EB garamond", serif;
+}
+
+nav {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: rgb(11, 9, 0);
+}
+
+.search-container {
+  margin-right: 120px;
+}
+
+ul {
+  display: flex;
+  margin-left: 100px;
+}
+
+ul li {
+  padding: 0px 30px;
+  list-style: none;
+  text-decoration: none;
+}
+
+ul li::after {
+  content: "";
+  width: 100%;
+  height: 1px;
+  display: block;
+  transition: all 0.3s ease;
+  bottom: 10%;
+}
+
+ul li:hover::after {
+  background-color: rgb(255, 149, 11);
+  height: 1px;
+}
+
+ul li a,
+.cta-button {
+  font-family: "EB Garamond", serif;
+  color: white;
+  text-decoration: none;
+}
+
+.fa-magnifying-glass {
+  color: black;
+  font-size: 14px;
+  padding-right: 5px;
+}
+
+#searchField {
+  padding: 4px 20px;
+}
+
+.search-button {
+  padding: 5px 20px;
+  background-color: rgb(255, 149, 11);
+}
+
+.dropdown {
+  cursor: pointer;
+  width: 100%;
+}
+
+.dropdown-content {
+  width: 100%;
+  display: none;
+  position: absolute;
+  right: 0px;
+  background-color: rgba(0, 0, 0, 0.932);
+  padding: 20px 20px;
+  margin-top: 5px;
+  padding-left: 130px;
+}
+
+.dropdown:hover > .dropdown-content {
+  display: block;
+  color: white;
+}
+
+.dropdown-content > li {
+  padding: 20px 0px;
+}
+
+.hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.716), rgba(0, 0, 0, 0.682)),
+    url(/RaindDays-photos/pexels-abhishek-gaurav-997462.jpg) no-repeat center /
+      cover;
+  width: 100%;
+  height: 100vh;
+}
+
+.hero-text-container {
+  margin-left: 130px;
+  margin-top: 5rem;
+  color: rgb(183, 183, 183);
+  width: 30em;
+}
+
+.cta-section {
+  color: rgb(239, 239, 239);
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  margin-left: 130px;
+}
+
+.cta-text {
+  font-size: 2rem;
+  width: 15em;
+}
+
+.cta-button {
+  background-color: rgb(255, 149, 11);
+  padding: 10px 20px;
+  border-radius: 2px;
+  margin-top: 20px;
+  text-transform: uppercase;
+  color: rgb(41, 41, 41);
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.hero-header {
+  color: rgb(255, 149, 11);
+  font-size: 4rem;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  text-transform: uppercase;
+}
+
+/*------------------------------------------------------------------------------*/
+
+.card-container {
+  display: flex;
+  flex-direction: row;
+  margin-left: 120px;
+  margin-top: 40px;
+}
+
+.image {
+  object-fit: cover;
+  width: 200px;
+  height: 190px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  overflow: hidden;
+}
+
+.card {
+  width: 200px;
+  background-color: rgb(53, 53, 53);
+  margin: 10px;
+  border-radius: 5px;
+  box-shadow: 5px 5px 6px rgba(0, 0, 0, 0.346);
+}
+
+.card:hover {
+}
+
+.card h3 {
+  margin-top: 5px;
+  padding: 0px 10px;
+  color: white;
+}
+
+.card p {
+  padding: 0px 10px;
+  color: white;
+}
+
+.cta-card-container {
+  margin-top: 20px;
+}
+
+.card a {
+  background-color: rgb(255, 149, 11);
+  color: rgb(41, 41, 41);
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 5px 10px;
+  border-radius: 2px;
+  display: block;
+  text-align: center;
+  margin: 10px 50px;
+}
