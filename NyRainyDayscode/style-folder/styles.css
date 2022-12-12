@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap");
+@import url("root/root.css");
 * {
   margin: 0;
   padding: 0;
@@ -11,9 +12,14 @@ p {
   font-family: "EB garamond", serif;
 }
 
+h1,
+h2 {
+  font-family: var(--heading-and-button-text);
+}
+
 nav {
-  position: relative;
   display: flex;
+  flex-wrap: wrap-reverse;
   justify-content: space-between;
   align-items: center;
   padding-top: 10px;
@@ -21,13 +27,25 @@ nav {
   background-color: rgb(11, 9, 0);
 }
 
+.nav-categories {
+  display: flex;
+  margin-left: 50px;
+}
+
 .search-container {
   margin-right: 120px;
+}
+
+.fa-cart-shopping {
+  color: white;
+  margin-right: 50px;
+  font-size: 25px;
 }
 
 ul {
   display: flex;
   margin-left: 100px;
+  align-items: center;
 }
 
 ul li {
@@ -72,22 +90,6 @@ ul li a,
   background-color: rgb(255, 149, 11);
 }
 
-.dropdown {
-  cursor: pointer;
-  width: 100%;
-}
-
-.dropdown-content {
-  width: 100%;
-  display: none;
-  position: absolute;
-  right: 0px;
-  background-color: rgba(0, 0, 0, 0.932);
-  padding: 20px 20px;
-  margin-top: 5px;
-  padding-left: 130px;
-}
-
 .dropdown:hover > .dropdown-content {
   display: block;
   color: white;
@@ -102,7 +104,7 @@ ul li a,
     url(/NyRainyDayscode/RaindDays-photos/pexels-karolina-3669288.jpg) no-repeat
       center / cover;
   width: 100%;
-  height: 60vh;
+  height: 57vh;
 }
 
 .hero-container {
@@ -152,27 +154,38 @@ ul li a,
 
 /*------------------------------------------------------------------------------*/
 
+.card-container-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 40px;
+}
+
+.card-container-header > h2 {
+  font-size: 2rem;
+}
+
 .card-container {
   display: flex;
   justify-content: center;
   flex-direction: row;
-  margin-top: 40px;
+  flex-wrap: wrap;
+  margin-top: 10px;
 }
 
 .image {
   object-fit: cover;
-  min-width: 200px;
-  height: 190px;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
+  min-width: 300px;
+  height: 350px;
+
   overflow: hidden;
 }
 
 .card {
-  width: 200px;
+  width: 300px;
   background-color: rgb(53, 53, 53);
   margin: 10px;
-  border-radius: 5px;
   box-shadow: 5px 5px 6px rgba(0, 0, 0, 0.346);
 }
 
@@ -204,5 +217,162 @@ ul li a,
   border-radius: 2px;
   display: block;
   text-align: center;
-  margin: 10px 50px;
+  margin: 25px 50px;
+}
+
+/*--------------------------- MEN & WOMEN-------------------------------------------*/
+
+.men-and-women {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 2rem;
+}
+
+.men-and-women > h2 {
+  font-size: 2rem;
+}
+
+.men-and-women__container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 800px;
+  margin-top: 2rem;
+}
+
+.men-card {
+  width: 34rem;
+  max-height: 43rem;
+  background-image: url(/NyRainyDayscode/RaindDays-photos/daniel-j-schwarz-VHUbeZMH6Yg-unsplash.jpg);
+  background-size: cover;
+  margin-right: 1rem;
+}
+
+.btn-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.men-card a,
+.women-card a {
+  text-decoration: none;
+  color: rgb(41, 41, 41);
+  background-color: var(--button-default-color);
+  padding: 10px 20px;
+  border-radius: 4px;
+  position: relative;
+  top: 600px;
+  font-family: var(--heading-and-button-text);
+}
+
+.women-card {
+  width: 34rem;
+  max-height: 43rem;
+  margin-left: 1rem;
+  background: linear-gradient(rgba(173, 173, 173, 0), rgba(0, 0, 0, 0.772)),
+    url(/NyRainyDayscode/RaindDays-photos/pexels-matt-hardy-2755165.jpg)
+      no-repeat center / cover;
+}
+
+.contact-container {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+.contact-image {
+  background-image: url(/NyRainyDayscode/RaindDays-photos/pexels-photo-3578286.jpeg);
+  width: 500px;
+  background-size: cover;
+}
+
+.message-form {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  gap: 40px;
+  padding: 40px 40px;
+
+  border-radius: 4px;
+  background-color: rgb(241, 241, 241);
+}
+
+.message-form h1 {
+  text-align: center;
+}
+
+form input,
+form textarea {
+  margin-top: 10px;
+  border: 0;
+  outline: none;
+}
+textarea {
+}
+
+.smalltext {
+  font-size: 12px;
+  padding-top: 5px;
+  color: rgb(133, 133, 133);
+}
+
+#name,
+#e-mail {
+  height: 40px;
+  font-size: 18px;
+}
+
+label input {
+  width: 100%;
+}
+
+#submit {
+  padding: 10px 60px;
+  background-color: rgb(10, 100, 55);
+  border: none;
+  border-radius: 4px;
+  color: white;
+  font-size: 1.2rem;
+}
+
+#submit:disabled {
+  background-color: rgb(160, 160, 160);
+}
+
+/*----------------------------------------------------------------Error Message-------------------------------------------*/
+
+.error-message {
+  margin-top: 5px;
+  display: none;
+  color: red;
+  position: absolute;
+  background-color: rgb(255, 217, 217);
+  padding: 5px 10px;
+}
+
+/*Media query main page ---------------------------------------------------------*/
+
+@media (max-width: 510px) {
+  ul {
+    margin-left: 0px;
+  }
+
+  .hero {
+    height: 37vh;
+  }
+
+  .hero-text-container {
+    width: 25em;
+  }
+
+  .cta-text {
+    font-size: 1.5rem;
+  }
+
+  .hero-header {
+    font-size: 2.2rem;
+    word-break: break-all;
+  }
 }
