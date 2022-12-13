@@ -101,8 +101,8 @@ ul li a,
 
 .hero {
   background: linear-gradient(rgba(0, 0, 0, 0.716), rgba(0, 0, 0, 0.682)),
-    url(/NyRainyDayscode/RaindDays-photos/pexels-karolina-3669288.jpg) no-repeat
-      center / cover;
+    url(/ny-rainy-days-code/RaindDays-photos/pexels-karolina-3669288.jpg)
+      no-repeat center / cover;
   width: 100%;
   height: 57vh;
 }
@@ -136,7 +136,7 @@ ul li a,
 }
 
 .cta-button {
-  background-color: rgb(255, 149, 11);
+  background-color: var(--button-default-color);
   padding: 10px 20px;
   border-radius: 2px;
   margin-top: 20px;
@@ -184,7 +184,7 @@ ul li a,
 
 .card {
   width: 300px;
-  background-color: rgb(53, 53, 53);
+  background-color: rgb(238, 238, 238);
   margin: 10px;
   box-shadow: 5px 5px 6px rgba(0, 0, 0, 0.346);
 }
@@ -195,12 +195,12 @@ ul li a,
 .card h3 {
   margin-top: 5px;
   padding: 0px 10px;
-  color: white;
+  color: rgb(38, 38, 38);
 }
 
 .card p {
   padding: 0px 10px;
-  color: white;
+  color: rgb(38, 38, 38);
 }
 
 .cta-card-container {
@@ -208,10 +208,9 @@ ul li a,
 }
 
 .card a {
-  background-color: rgb(255, 149, 11);
+  background-color: var(--button-default-color);
   color: rgb(41, 41, 41);
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  text-transform: uppercase;
   text-decoration: none;
   padding: 5px 10px;
   border-radius: 2px;
@@ -244,7 +243,7 @@ ul li a,
 .men-card {
   width: 34rem;
   max-height: 43rem;
-  background-image: url(/NyRainyDayscode/RaindDays-photos/daniel-j-schwarz-VHUbeZMH6Yg-unsplash.jpg);
+  background-image: url(/ny-rainy-days-code/RaindDays-photos/daniel-j-schwarz-VHUbeZMH6Yg-unsplash.jpg);
   background-size: cover;
   margin-right: 1rem;
 }
@@ -272,18 +271,19 @@ ul li a,
   max-height: 43rem;
   margin-left: 1rem;
   background: linear-gradient(rgba(173, 173, 173, 0), rgba(0, 0, 0, 0.772)),
-    url(/NyRainyDayscode/RaindDays-photos/pexels-matt-hardy-2755165.jpg)
+    url(/ny-rainy-days-code/RaindDays-photos/pexels-matt-hardy-2755165.jpg)
       no-repeat center / cover;
 }
 
 .contact-container {
-  margin-top: 50px;
+  width: 100%;
   display: flex;
   justify-content: center;
+  margin-bottom: 2rem;
 }
 
 .contact-image {
-  background-image: url(/NyRainyDayscode/RaindDays-photos/pexels-photo-3578286.jpeg);
+  background-image: url(/ny-rainy-days-code/RaindDays-photos/pexels-photo-3578286.jpeg);
   width: 500px;
   background-size: cover;
 }
@@ -325,6 +325,10 @@ textarea {
 
 label input {
   width: 100%;
+}
+
+label {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
 #submit {
