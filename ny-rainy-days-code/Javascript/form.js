@@ -1,4 +1,4 @@
-const form = document.querySelector(".message-form");
+const form = document.querySelector("form");
 const nameField = document.querySelector("#name");
 const nameError = document.querySelector("#nameError");
 
