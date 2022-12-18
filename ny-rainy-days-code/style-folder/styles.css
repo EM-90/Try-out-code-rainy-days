@@ -212,6 +212,11 @@ nav {
   text-transform: uppercase;
   color: rgb(41, 41, 41);
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  transition: 0.3s;
+}
+
+.cta-button:hover {
+  transform: scale(1.1);
 }
 
 .hero-header {
@@ -282,30 +287,31 @@ nav {
 }
 
 .card h3 {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 1.5rem;
   margin-top: 5px;
   padding: 0px 10px;
   color: rgb(38, 38, 38);
 }
 
 .card p {
-  padding: 0px 10px;
+  font-size: 1.2rem;
+  padding: 5px 10px;
   color: rgb(38, 38, 38);
+}
+
+.price {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  margin-bottom: 10px;
+  text-align: end;
+}
+
+.card a {
+  text-decoration: none;
 }
 
 .cta-card-container {
   margin-top: 20px;
-}
-
-.card a {
-  background-color: rgb(255, 211, 154);
-  color: rgb(41, 41, 41);
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  text-decoration: none;
-  padding: 5px 10px;
-  border-radius: 2px;
-  display: block;
-  text-align: center;
-  margin: 25px 50px;
 }
 
 /*--------------------------- MEN & WOMEN-------------------------------------------*/
@@ -502,9 +508,9 @@ label {
 
 .cart {
   display: none;
-
-  right: auto;
-  bottom: 300px;
+  position: fixed;
+  right: 50px;
+  top: 120px;
   border: 1px solid var(--button-default-color);
   max-width: 600px;
   min-width: 200px;
@@ -516,6 +522,15 @@ label {
   height: 100px;
   width: 100px;
   background-size: cover;
+}
+
+.checkout-btn {
+  padding: 10px 60px;
+  background-color: rgb(10, 100, 55);
+  border: none;
+  border-radius: 4px;
+  color: white;
+  font-size: 1.2rem;
 }
 
 /*---------------------------------------------------------CART/CHECKOUT------------------------------------*/
@@ -532,6 +547,10 @@ label {
   padding-top: 20px;
   padding-bottom: 20px;
   font-size: 2.5rem;
+}
+
+form {
+  max-width: 100%;
 }
 
 /*--------------------------------------FOOTER------------------------------------------------*/
@@ -621,6 +640,58 @@ label {
   }
 }
 
+@media (max-width: 800px) {
+  .men-card,
+  .women-card {
+    width: 21rem;
+    max-height: 26rem;
+  }
+  .men-card a,
+  .women-card a {
+    position: static;
+    margin-top: 10px;
+  }
+
+  .men-and-women__container {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 766px) {
+  .men-card,
+  .women-card {
+    margin: 0;
+    margin: 5px 5px;
+  }
+}
+
+@media (max-width: 520px) {
+  .hero-text-container {
+    width: 90%;
+  }
+
+  .hero-header {
+    font-size: 2rem;
+  }
+
+  .cta-text {
+    font-size: 1.3rem;
+    width: 90%;
+  }
+
+  .hero {
+    height: 37vh;
+  }
+
+  form {
+    width: 400px;
+  }
+
+  #message-area {
+    width: 100%;
+  }
+}
+
 @media (max-width: 510px) {
   ul {
     margin-left: 0px;
@@ -628,14 +699,6 @@ label {
 
   .hero {
     height: 37vh;
-  }
-
-  .hero-text-container {
-    width: 25em;
-  }
-
-  form {
-    width: 400px;
   }
 
   .cta-text {
